@@ -1,0 +1,29 @@
+html {
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: $red;
+    background-image: url('/images/bg-intro-mobile.png');
+    overflow-x: hidden;
+
+    @media (min-width: $desktop) {
+        background-image: url('/images/bg-intro-desktop.png');
+    }
+}
+
+main {
+    width: 100%;
+}
