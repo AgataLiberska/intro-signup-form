@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- [See the solution on Frontend Mentor](https://www.frontendmentor.io/solutions/intro-signup-form-with-slightly-messy-js-GuR_iyXgi)
 - [View the live site](https://intro-signup-form-two.vercel.app/)
 
 ## My process
