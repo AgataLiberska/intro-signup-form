@@ -18,6 +18,10 @@ body {
     background-color: $red;
     background-image: url('/images/bg-intro-mobile.png');
     overflow-x: hidden;
+
+    @media (min-width: $desktop) {
+        background-image: url('/images/bg-intro-desktop.png');
+    }
 }
 
 main {
