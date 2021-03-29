@@ -12,6 +12,8 @@ function checkRequired(inputArr) {
     inputArr.forEach(input => {
         if (!input.value) {
             showError(input, `${getInputName(input)} cannot be empty`);
+        } else {
+            removeError(input);
         }
     })
 }
@@ -31,11 +33,14 @@ function showError(input, message) {
     errorMsg.textContent = message;
 }
 
+function removeError(input) {
+    const inputContainer = input.closest('.js-input-container');
+    inputContainer.classList.remove('not-valid');
+}
+
 function getInputName(input) {
     return `${input.name.charAt(0).toUpperCase()}` + `${input.name.slice(1)}`
 }
-
-
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -45,4 +50,14 @@ form.addEventListener('submit', e => {
     if (email.value) {
         checkEmail(email);
     }
+})
+
+required.forEach(input => {
+    input.addEventListener('input', () => {
+        if (input.value) {
+            removeError(input);
+            if (input === email) {
+                checkEmail(email);
+            }
+    }})
 })
